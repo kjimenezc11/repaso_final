@@ -97,9 +97,10 @@ def consultar_mantenimientos():
            mantenimiento_mas_echo = df.groupby('tipo_mantenimiento')['cantidad_km'].sum().idxmax()
            print(f'Mantenimiento mas echo: {mantenimiento_mas_echo}')
 
-            tendencia_cliente = df
+           tendencia_cliente = df[df['cliente'] == df['cliente'].mode()[0]]
+           print('\nTendencia de mantenimiento por cliente:')
+           print(tendencia_cliente)
 
-        
 if __name__ == "__main__":
     print("Bienvenido al sistema MJ")
     menu()
