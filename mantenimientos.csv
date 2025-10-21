@@ -1,1 +1,6 @@
-tipo_mantenimiento,costo_mantenimiento,fecha_mantenimiento,cliente,cantidad_km
+tipo_mantenimiento,costo_mantenimiento,fecha_mantenimiento,cliente,cantidad_km
+
+tipo_mantenimiento,costo_mantenimiento,fecha_mantenimiento,cliente,cantidad_km,numero_placa
+
+2,99000.0,27/12/2008,jeremy,12002.0,256894
+
