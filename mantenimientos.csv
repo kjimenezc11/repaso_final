@@ -6,3 +6,5 @@ tipo_mantenimiento,costo_mantenimiento,fecha_mantenimiento,cliente,cantidad_km,n
 
 tipo_mantenimiento,costo_mantenimiento,fecha_mantenimiento,cliente,cantidad_km,numero_placa
 2,50000.0,20/10/20\],emerson,50000.0,777411
+tipo_mantenimiento,costo_mantenimiento,fecha_mantenimiento,cliente,cantidad_km,numero_placa
+2,5000.0,2/10/2025,emerson,5000.0,202020
