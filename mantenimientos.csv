@@ -4,3 +4,5 @@ tipo_mantenimiento,costo_mantenimiento,fecha_mantenimiento,cliente,cantidad_km,n
 
 2,99000.0,27/12/2008,jeremy,12002.0,256894
 
+tipo_mantenimiento,costo_mantenimiento,fecha_mantenimiento,cliente,cantidad_km,numero_placa
+2,50000.0,20/10/20\],emerson,50000.0,777411
