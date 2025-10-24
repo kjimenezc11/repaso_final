@@ -12,3 +12,5 @@ tipo_mantenimiento,costo_mantenimiento,fecha_mantenimiento,cliente,cantidad_km,n
 1,3000.0,10/12/2025,ferreto,200000.0,12131546
 tipo_mantenimiento,costo_mantenimiento,fecha_mantenimiento,cliente,cantidad_km,numero_placa
 1,2000.0,10/12/2025,ferreto,30000.0,11111111
+1,2000.0,10/12/2022,keneth,12222.0,12521525
+2,25000.0,10/12/2025,keneth,20000.0,4525454
