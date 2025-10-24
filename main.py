@@ -6,14 +6,14 @@ def menu():
     mantenimientos = []
     while True:
         try:
-            print("\n=== MENÚ DE OPCIONES ===")
+            print("\n=== MENU DE OPCIONES ===")
             print("1. Registrar mantenimiento")
             print("2. Guardar mantenimientos en archivo")
             print("3. Consultar todos los mantenimientos")
             print("4. Consultar mantenimientos por moto")
             print("5. Salir")
 
-            opcion = int(input("Seleccione una opción: "))
+            opcion = int(input("Seleccione una opcion: "))
 
             if opcion == 1:
                 registrar_mantenimientos(mantenimientos)
@@ -24,23 +24,22 @@ def menu():
             elif opcion == 4:
                 consultar_mantenimientos_moto()
             elif opcion == 5:
-                print(" Saliendo del programa. ¡Hasta luego!")
+                print(" Saliendo del programa. Hasta luego")
                 break
             else:
-                print(" Opción no válida.")
+                print(" Opcion no valida.")
         except ValueError:
-            print(" Entrada no válida, por favor ingrese un número del 1 al 5.")
+            print(" Entrada no valida, por favor ingrese un numero del 1 al 5.")
 
 
-# ==============================
 #   FUNCIÓN: REGISTRAR
-# ==============================
+
 def TiposMantenimientos():
     print("\nTipos de mantenimiento disponibles:")
     print("1. Cambio de aceite")
-    print("2. Revisión de frenos")
-    print("3. Sustitución de neumáticos")
-    print("4. Inspección general")
+    print("2. Revision de frenos")
+    print("3. Sustitucion de neumaticos")
+    print("4. Inspeccion general")
 
 
 def registrar_mantenimientos(mantenimientos: list):
@@ -51,8 +50,8 @@ def registrar_mantenimientos(mantenimientos: list):
             costo_mantenimiento = float(input("Ingrese el costo del mantenimiento: "))
             fecha_mantenimiento = input("Ingrese la fecha del mantenimiento (DD/MM/AAAA): ")
             cliente = input("Ingrese el nombre del cliente: ")
-            cantidad_km = float(input("Ingrese la cantidad de kilómetros recorridos: "))
-            numero_placa = input("Ingrese el número de placa de la moto: ").upper()
+            cantidad_km = float(input("Ingrese la cantidad de kilometros recorridos: "))
+            numero_placa = input("Ingrese el numero de placa de la moto: ").upper()
 
             if costo_mantenimiento < 0:
                 print(" El costo no puede ser negativo.")
@@ -76,12 +75,12 @@ def registrar_mantenimientos(mantenimientos: list):
                 break
 
         except ValueError:
-            print(" Entrada no válida. Intente de nuevo.")
+            print(" Entrada no valida. Intente de nuevo.")
 
 
-# ==============================
+
 #   FUNCIÓN: GUARDAR
-# ==============================
+
 def guardar_mantenimientos(mantenimientos: list):
     try:
         if not mantenimientos:
@@ -113,9 +112,9 @@ def guardar_mantenimientos(mantenimientos: list):
         print(f" Error al guardar los mantenimientos: {e}")
 
 
-# ==============================
+
 #   FUNCIÓN: CONSULTAR TODOS
-# ==============================
+
 def consultar_mantenimientos():
     try:
         df = pd.read_csv("mantenimientos.csv")
@@ -141,14 +140,14 @@ def consultar_mantenimientos():
         print(f" Cliente con más mantenimientos: {cliente_top}")
 
     except FileNotFoundError:
-        print(" No se encontró el archivo de mantenimientos.")
+        print(" No se encontro el archivo de mantenimientos.")
     except Exception as e:
         print(f" Error al consultar mantenimientos: {e}")
 
 
-# ==============================
+
 #   FUNCIÓN: CONSULTAR POR MOTO
-# ==============================
+
 def consultar_mantenimientos_moto():
     try:
         df = pd.read_csv("mantenimientos.csv")
@@ -157,7 +156,7 @@ def consultar_mantenimientos_moto():
             print(" No hay mantenimientos registrados.")
             return
 
-        moto = input("Ingrese el número de placa de la moto a consultar: ").upper()
+        moto = int(input("Ingrese el numero de placa de la moto a consultar: ").upper())
         mantenimientos_moto = df[df['numero_placa'] == moto]
 
         if mantenimientos_moto.empty:
@@ -170,14 +169,13 @@ def consultar_mantenimientos_moto():
             print(f"\n Total invertido en la moto {moto}: {total_moto:.2f} colones")
 
     except FileNotFoundError:
-        print(" No se encontró el archivo de mantenimientos.")
+        print(" No se encontro el archivo de mantenimientos.")
     except Exception as e:
         print(f" Error al consultar mantenimientos por moto: {e}")
 
 
-# ==============================
+
 #   PROGRAMA PRINCIPAL
-# ==============================
 if __name__ == "__main__":
-    print("🏍️ Bienvenido al sistema de control de mantenimientos MJ")
+    print(" Bienvenido al sistema de control de mantenimientos MJ")
     menu()
